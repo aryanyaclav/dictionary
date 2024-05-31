@@ -28,12 +28,15 @@ export default function Dictionary() {
             for(let index in wordsMeaning){
                 if(wordsMeaning[index].word.toLowerCase() === inputText.toLowerCase()){
                     setDefinition(wordsMeaning[index].meaning)
+                    found = true
                 }
-                found = true
+                
             }
             if(!found){
                 setDefinition("Word not found in the dictionary.")
             }
+        }else{
+            setDefinition("Word not found in the dictionary.")
         }
     }
   return (
